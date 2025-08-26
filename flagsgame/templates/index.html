@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag Guesser</title>
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="index-container"><!--Main index template container-->  
+    <div class="index-title-container"><!--Section: Game title-->
+        <h1 class="index-h1">Welcome to the FLAG GUESSER game</h1>
+        
+    </div> 
+
+    <div class="choose-difficulty-container"><!--Display with form to choose the difficulty-->
+        
+        <form method="POST" class="difficulty-form">
+            {% csrf_token %}
+            <label for="" class="player-name-label">Put your name and then choose the difficulty</label>
+            <input type="text" name="player-name" class="player-name" placeholder="Your name" required>
+            <button type="submit" name="easy" class="difficulty-button">EASY</button>
+            <button type="submit" name="intermediate" class="difficulty-button">INTERMEDIATE</button>
+            <button type="submit" name="hard" class="difficulty-button">HARD</button>
+        </form>
+
+    </div>      
+    
+    <i class="difficulty-information">The difficulty is defined by the population in each country: more than 70 million is "easy", between 10 million and 70 million is "intermediate", and less than 10 million is "difficult"
+    </i>
+    
+
+  
+<!--#First 10 scores from db -->  
+<ul class="scoreboard">
+    <h2 class="top-scores">TOP SCORES</h2>
+    {% if score in socreboard %}
+        {% for score in scoreboard %}
+        <li class="score-li">
+            {{ score }}
+        </li>
+        {% endfor %}
+    {% else %}    
+        <i class="no-scores-yet">There's no scores on database yet </i>
+    {% endif %}
+</ul>
+
+
+<!--Advice about the API-->
+    <i class="api-information-container">This website uses REST COUNTRIES API, which sometimes doesn't work or is very slow: <a href="https://restcountries.com">https://restcountries.com</a></i> 
+
+</div> 
+
+
+</body>
+</html>

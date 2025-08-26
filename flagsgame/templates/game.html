@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the flag</title>
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+<div class="game-container"><!--Main game template container-->
+    <div class="game-title-container"><!--Section: Game title-->
+        <h1 class="game-h1">GUESS THE FLAG!</h1>
+    </div>
+
+    {% if request.session.difficulty %}
+        <p class="difficulty">Difficulty: {{ request.session.difficulty }}</p>
+    {% else %}
+        <p>There's no difficulty selected</p>
+    {% endif %}
+
+    <div class="game-display"><!--Game's display container, with flag and forms-->
+        {% if not game_over %}
+            <div class="counter">
+                <p class="point-counter">Points: {{ points }}</p>
+                <p class="attempts-counter">Attempts available: {{ attempts }} </p>
+            </div>
+
+            {% if not correct_flag %}<!--If user didn't start to play o fail the guess-->
+                <div class="flag-img"><!--Displays the random flag image-->
+                {% if random_flag %}
+                    {% if ".png" in random_flag %}
+                        <img src="{{ random_flag }}" alt="flag" class="random-flag-img">
+                    {% else %}
+                        <p>{{ random_flag }}</p>
+                    {% endif %}    
+                {% endif %}
+                </div>
+         
+            <div class="user-answer"><!--Form where player submits their guess-->
+                <form method="get" action="" class="guess-flag-form">
+                    <label for="country" class="guess-flag-label">Your answer:</label>
+                    <input type="text" id="guess-flag-input" name="country">
+                    <button type="submit" class="guess-flag-button">Guess!</button>
+                </form>
+            </div>
+            {% endif %}
+
+        
+            {% if user_country_name %}<!--If user guess or miss-->
+            <div class="compare-flags">
+                <p class="answer">Your answer: {{ user_country_name }}</p>
+                {% if correct_flag %}
+                    <div class="correct-answer-container">
+                        <form method="post" class="compare-form">
+                            <p class="correct-answer"> Great!</p>
+                            {% csrf_token %}
+                            <button type="submit" name="reset" class="button-reset">Keep guessing</button>
+                        </form>
+                    </div>
+                {% endif %}
+                {% if wrong_flag %}
+                    <div class="wrong-answer-container">
+                        <form method="post" class="compare-form">
+                        <p class="wrong-answer">Fail! Try again or skip flag</p>
+                        {% csrf_token %}
+                            <button type="submit" name="reset" class="button-reset">Skip flag</button>
+                        </form>
+                    </div>
+                {% endif %}
+            </div>
+            {% endif %}
+        {% endif %}
+
+        {% if game_over %}<!--If user run out of attempts-->
+            <h2 class="game-over-title">GAME OVER</h2>
+            <p class="game-over-counter">Points: {{ points }}</p>
+            <p class="game-over-exit">Exit game and start again</p>
+        {% endif %}
+        
+        
+        <div class="exit-form"><!--Button to redirect index and restart session-->
+            <form method="post" action="" class="exit-game">
+            {% csrf_token %}
+                <button class="exit-button" name="exit">Exit game</button>
+            </form>
+        </div>       
+
+    
+    </div>
+</div>
+</body>
+</html>

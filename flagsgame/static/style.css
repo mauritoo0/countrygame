@@ -1,0 +1,485 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* evita scroll horizontal fantasma */
+}
+
+body{
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 400;
+    font-style:normal;
+}
+.difficulty-button, .score-li, .counter,  .guess-flag-label, .guess-flag-button, .exit-button, .button-reset, .game-over-counter, .game-over-exit{
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 100;
+    font-style:normal;
+}
+
+/*Index template*/
+.index-container {
+    background-image: url("/static/img/background-template.png");
+    background-size:cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 100;
+    font-style:normal;
+   
+}
+
+.index-title-container{
+    background-image: url("/static/img/background-index-title.png");
+    background-size:contain;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    flex-basis: 200px;
+    gap: 2rem;
+    justify-content: center;
+    font-size: 2rem;
+    color: rgb(251, 252, 252);
+    text-shadow: 3px 3px 8px rgb(0, 0, 0);
+    border-bottom: 0.1rem solid rgb(77, 77, 104);
+    
+     
+}
+
+
+.index-h1 {
+    text-align: center;
+   
+  
+}
+
+
+
+.choose-difficulty-container {
+    color: white;
+    text-shadow: 3px 3px 8px rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+    flex-basis: 375px;
+    
+}
+
+
+.difficulty-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    
+}
+
+.player-name{
+    width: 15rem;
+    height: 2rem;
+}
+
+.difficulty-button{
+    width: 20rem;
+    height: 3rem;
+    cursor: pointer;
+    color: rgb(70, 69, 69);
+    text-shadow: 2px 2px 5px rgb(201, 199, 199);
+    
+
+}
+
+.difficulty-button:hover{
+    box-shadow: 0px 0px 5px;
+
+}
+
+
+.difficulty-information{
+    color: white;
+    width: 100%;
+    text-align: center;
+    text-shadow: 3px 3px 8px rgb(0, 0, 0);
+    
+    
+}
+
+.scoreboard{
+    color: white;
+    margin: 1.5rem 1rem 1rem 1rem;
+    padding: 0.5rem;
+    list-style: none;
+    border: solid;
+    border-radius: 1.5rem;
+    width: 50%;
+    
+}
+
+.top-scores{
+    text-align: center;
+    text-shadow: 3px 3px 8px rgb(0, 0, 0);
+}
+
+
+.score-li{
+    font-weight: 100;
+    margin: 0.2rem;
+}
+
+.api-information-container{
+    color: white;
+    text-shadow: 3px 3px 8px rgb(0, 0, 0);
+    text-align: center;
+    flex: 1;
+    flex-basis: 50px;
+    
+}
+
+.no-scores-yet{
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 100;
+    font-style:italic;
+    font-size: 0.6rem;
+
+}
+
+/*Game template*/
+
+.game-container {
+    background-image: url("/static/img/background-template.png");
+    background-size:cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.game-title-container{
+    background-image: url("/static/img/background-index-title.png");
+    background-size:contain;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    flex-basis: 200px;
+    font-size: 2rem;
+    color: rgb(251, 252, 252);
+    text-shadow: 3px 3px 8px rgb(0, 0, 0);
+    border-bottom: 0.1rem solid rgb(77, 77, 104);
+    
+    
+}
+
+.game-h1{
+    text-align: center;
+    
+    
+}
+
+
+.difficulty{
+    font-size: 1.5rem;
+    color: rgb(251, 252, 252);
+    text-shadow: 3px 3px 8px rgb(0, 0, 0);
+    margin-top: 3vh;
+    
+}
+
+
+.game-display{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    flex-basis: 300px;
+    margin-top: 1rem;
+}
+
+.counter{
+    padding: 0.5rem;
+    color: white;
+    text-align: start;
+    font-size: 0.75rem;
+    font-style: normal;
+    border-style: solid;
+    text-shadow: 3px 3px 8px rgb(0, 0, 0);
+    
+    
+    
+}
+
+.flag-img{
+    padding: 2rem;
+    
+}
+
+.random-flag-img{
+    box-shadow: 3px 3px 10px rgb(0, 0, 0);
+    width: 300px;       
+    height: 200px;      
+    object-fit: cover;
+}
+
+.user-answer{
+    padding: 1.5rem;
+}
+
+.guess-flag-label{
+    color: rgb(251, 252, 252);
+    text-shadow: 3px 3px 8px rgb(0, 0, 0);
+    
+}
+
+
+.guess-flag-button, .exit-button, .button-reset{
+    padding: 0.5rem;
+    width: 7rem;
+    cursor: pointer;
+    color: rgb(70, 69, 69);
+    text-shadow: 2px 2px 5px rgb(201, 199, 199);
+    
+}
+
+.guess-flag-button:hover, .exit-button:hover, .button-reset:hover{
+    box-shadow: 0px 0px 5px;
+}
+
+
+.compare-flags{
+    padding: 1rem;
+    width: auto;
+    text-align: center;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
+
+.correct-answer-container{
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    flex-basis: 150px;
+    
+}
+
+.compare-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.correct-answer{
+    font-size: 2rem;
+    color: rgb(0, 255, 55);
+    text-shadow: 3px 3px 8px rgb(0, 0, 0);
+}
+
+.wrong-answer{
+    font-size: 2rem;
+    color: rgb(253, 0, 0);
+    text-shadow: 3px 3px 8px rgb(0, 0, 0);
+}
+
+
+.answer{
+    font-size: 2rem;
+    color: rgb(251, 252, 252);
+    text-shadow: 3px 3px 8px rgb(0, 0, 0);
+}
+
+.game-over-title{
+    font-size: 3rem;
+    color: rgb(255, 0, 0);
+    text-shadow: 3px 3px 8px rgb(0, 0, 0);
+    margin-bottom: 2rem;;
+}
+
+.game-over-counter, .game-over-exit{
+    font-size: 2rem;
+    color: white;
+}
+
+
+
+.exit-form{
+    padding: 1rem;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .index-title-container,
+    .game-title-container {
+        min-height: 20vh; 
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: none;       
+        flex-basis: auto;  
+    }
+
+    .index-h1,
+    .game-h1 {
+        font-size: 2.2rem;
+        padding: 0.5rem;
+    }
+
+    .choose-difficulty-container {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .player-name {
+        width: 80%;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    .difficulty-button {
+        width: 80%;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    .scoreboard {
+        width: 80%;
+        font-size: 0.9rem;
+    }
+
+    .top-scores {
+        font-size: 1.2rem;
+    }
+
+    .random-flag-img {
+        width: 90%;
+        height: auto;
+        max-height: 180px;
+    }
+
+    .guess-flag-label {
+        font-size: 1rem;
+    }
+
+    .guess-flag-button, 
+    .exit-button, 
+    .button-reset {
+        width: 70%;
+        font-size: 1rem;
+    }
+
+    .counter {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .answer,
+    .correct-answer,
+    .wrong-answer,
+    .game-over-counter,
+    .game-over-exit {
+        font-size: 1.2rem;
+    }
+
+    #guess-flag-input {
+    margin-bottom: 1rem; 
+    padding: 0.5rem;
+    width: 80%;
+    max-width: 300px;
+    font-size: 1rem;
+    }
+
+    .guess-flag-button {
+        margin-top: 0.5rem; 
+    }
+
+    .game-over-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .index-h1,
+    .game-h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    
+    }
+
+    .difficulty-button {
+        height: 2rem;
+        font-size: 0.9rem;
+    }
+
+    .player-name {
+        height: 2rem;
+        font-size: 0.9rem;
+    }
+
+    .random-flag-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .guess-flag-label {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .guess-flag-button, 
+    .exit-button, 
+    .button-reset {
+        width: 90%;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .counter {
+        font-size: 0.8rem;
+    }
+
+    .answer,
+    .correct-answer,
+    .wrong-answer,
+    .game-over-counter,
+    .game-over-exit {
+        font-size: 1rem;
+    }
+
+    #guess-flag-input {
+    margin-bottom: 1rem; 
+    padding: 0.5rem;
+    width: 80%;
+    max-width: 300px;
+    font-size: 1rem;
+    }
+
+    .guess-flag-button {
+        margin-top: 0.5rem; 
+    }
+
+    .game-over-title {
+        font-size: 1.5rem;
+    }
+
+    
+}
