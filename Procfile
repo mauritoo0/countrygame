@@ -1,1 +1,1 @@
-web: gunicorn countrygame.wsgi
+web: gunicorn countrygame.wsgi --workers 1 --timeout 60
