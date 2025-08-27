@@ -41,3 +41,7 @@ urllib3==2.3.0
 virtualenv==20.26.3
 Werkzeug==3.0.3
 gunicorn==21.2.0
+gunicorn
+psycopg2-binary
+dj-database-url
+Django==5.2.4
