@@ -7,7 +7,7 @@ import pycountry
 #View for the index template where the user selects difficulty
 def index(request):
     request.session.flush()#Delete session at the time "index" is opened
-    scoreboard = Score.objects.all()[:10]
+    scoreboard = Score.objects.order_by('-player_score')[:10]
     if request.method == 'POST':# User selects the difficulty level through the form
         if 'player-name' in request.POST:
             request.session['player'] = request.POST.get('player-name', None)
