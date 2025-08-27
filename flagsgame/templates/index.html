@@ -43,10 +43,10 @@
 <!--#First 10 scores from db -->  
 <ul class="scoreboard">
     <h2 class="top-scores">TOP SCORES</h2>
-    {% if score in socreboard %}
+    {% if scoreboard %}
         {% for score in scoreboard %}
         <li class="score-li">
-            {{ score }}
+            {{ score.player_name }} | {{ score.player_score }} pts
         </li>
         {% endfor %}
     {% else %}    
