@@ -106,7 +106,7 @@ body{
 
 .difficulty-information{
     color: white;
-    width: 100%;
+    width: 80%;
     text-align: center;
     text-shadow: 3px 3px 8px rgb(0, 0, 0);
     
@@ -141,6 +141,7 @@ body{
     text-align: center;
     flex: 1;
     flex-basis: 50px;
+    width: 80%;
     
 }
 
@@ -358,6 +359,15 @@ body{
         width: 80%;
         height: 2.5rem;
         font-size: 1rem;
+    }
+
+    button, input[type="submit"] {
+    -webkit-appearance: none; /* iOS */
+    -moz-appearance: none;    /* Firefox */
+    appearance: none;
+    background-color: #f0f0f0;
+    color: rgb(70, 69, 69);
+    text-shadow: 2px 2px 5px rgb(201, 199, 199); 
     }
 
     .scoreboard {
