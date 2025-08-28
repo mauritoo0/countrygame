@@ -22,7 +22,7 @@ body{
 
 /*Index template*/
 .index-container {
-    background-image: url("/static/img/background-template.png");
+    
     background-size:cover;
     background-position: center;
     min-height: 100vh;
