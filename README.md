@@ -23,14 +23,14 @@ The application can sometimes be slow because the API is free and does not alway
 🔗 <a href="https://flag-guesser.onrender.com/">Click here to see the project live</a>
 
 
-<h2>Screenshots</h2>
+Screenshots
 ![Homepage](screenshots/1.jpg)
 ![Game Screen](screenshots/2.jpg)
 ![Game Screen](screenshots/3.jpg)
 ![Homepage](countrygame/screenshots/1.jpg)
 
 
-<h2>Author / Contact</h2>
+Author / Contact
 
 Name: Mauro Favieri Robles
 
