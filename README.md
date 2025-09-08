@@ -1,4 +1,4 @@
-<h1>"Guess the flag"</h1>
+# "Guess the flag"
 
 This is a game where the user has to guess which flag is displayed on the screen. It uses the pycountry library and the "restcountries" API: pycountry randomly selects a country, and then the API is queried using its alpha code to retrieve the image and necessary data for each country.
 
@@ -9,7 +9,7 @@ The player has 3 attempts and earns 1 point for each correct guess. If they reac
 The application can sometimes be slow because the API is free and does not always work perfectly.
 
 
-<h2>The project uses HTML, CSS, JavaScript, and Django.</h2>
+## The project uses HTML, CSS, JavaScript, and Django
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
@@ -19,18 +19,18 @@ The application can sometimes be slow because the API is free and does not alway
 ![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 
-<h2>Live Demo</h2>
+## Live Demo
 🔗 <a href="https://flag-guesser.onrender.com/">Click here to see the project live</a>
 
 
-##Screenshots
+## Screenshots
 ![Homepage](screenshots/1.jpg)
 ![Game Screen](screenshots/2.jpg)
 ![Game Screen](screenshots/3.jpg)
 ![Homepage](countrygame/screenshots/1.jpg)
 
 
-Author / Contact
+## Author / Contact
 
 Name: Mauro Favieri Robles
 
