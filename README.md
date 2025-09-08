@@ -1,4 +1,4 @@
-# "Guess the flag"
+<h1>"Guess the flag"</h1>
 
 This is a game where the user has to guess which flag is displayed on the screen. It uses the pycountry library and the "restcountries" API: pycountry randomly selects a country, and then the API is queried using its alpha code to retrieve the image and necessary data for each country.
 
@@ -8,7 +8,8 @@ The player has 3 attempts and earns 1 point for each correct guess. If they reac
 
 The application can sometimes be slow because the API is free and does not always work perfectly.
 
-The project uses HTML, CSS, JavaScript, and Django.
+
+<h2>The project uses HTML, CSS, JavaScript, and Django.</h2>
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
@@ -18,11 +19,11 @@ The project uses HTML, CSS, JavaScript, and Django.
 ![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 
-Live Demo
+<h2>Live Demo</h2>
 🔗 <a href="https://flag-guesser.onrender.com/">Click here to see the project live</a>
 
 
-Screenshots
+<h2>Screenshots</h2>
 ![Homepage](screenshots/1.jpg)
 ![Game Screen](screenshots/2.jpg)
 ![Game Screen](screenshots/3.jpg)
@@ -30,15 +31,15 @@ Screenshots
 ![Game Screen](screenshots/5.jpg)
 
 
-Author / Contact
+<h2>Author / Contact</h2>
 
-Name: Your Name
+Name: Mauro Favieri Robles
 
-LinkedIn: Your LinkedIn
+LinkedIn: http://www.linkedin.com/in/mauro-favieri-robles-a693942b0
 
-GitHub: Your GitHub
+GitHub: https://github.com/mauritoo0
 
-Email: your.email@example.com
+Email: maurofavieri@hotmail.com
 
-WhatsApp: Message me
+WhatsApp: +34 685 14 36 15
 
