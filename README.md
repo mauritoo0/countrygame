@@ -24,11 +24,9 @@ The application can sometimes be slow because the API is free and does not alway
 
 
 <h2>Screenshots</h2>
-![Homepage](countrygame/screenshots/1.jpg)
+![Homepage](screenshots/1.jpg)
 ![Game Screen](screenshots/2.jpg)
 ![Game Screen](screenshots/3.jpg)
-![Game Screen](screenshots/4.jpg)
-![Game Screen](screenshots/5.jpg)
 
 
 <h2>Author / Contact</h2>
