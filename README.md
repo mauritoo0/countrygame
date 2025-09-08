@@ -23,7 +23,11 @@ Live Demo
 
 
 Screenshots
-
+![Homepage](screenshots/1.jpg)
+![Game Screen](screenshots/2.jpg)
+![Game Screen](screenshots/3.jpg)
+![Game Screen](screenshots/4.jpg)
+![Game Screen](screenshots/5.jpg)
 
 
 Author / Contact
